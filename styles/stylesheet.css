@@ -1,5 +1,34 @@
 * {margin: 0; font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
+/* this makes me want to cry */
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+/* end clearfix */
+
 header nav {background-color: rgb(132,104,179); text-align: center;}
 
 nav ul {list-style: none; padding: 0; margin: 0;}
@@ -15,7 +44,6 @@ header h1 {color: rgb(132,104,179); font-size: 2.5rem; padding-top: 2.9rem; padd
 #main nav {float: left; width: 12.5rem; text-align: center;}
 #main nav ul {margin: 5rem 0rem; }
 #main nav ul li {line-height: 2rem;}
-#main nav p {text-align: left; margin: 1rem; font-size: .8rem}
 #main nav p a {color: black; font-weight: bold;}
 
 #main section {background-color: rgb(225,228,233); margin-left: 12.5rem;}
@@ -28,6 +56,14 @@ header h1 {color: rgb(132,104,179); font-size: 2.5rem; padding-top: 2.9rem; padd
 #main section td.numeric {text-align: right;}
 #main section tr:nth-child(odd) { background-color: rgba(192,178,213,0.25); }
 #main section tr th { background-color: rgba(192,178,213,0.5)}
+#main section article { padding: 2rem; max-width: 50rem;}
+#main section article p { margin: 1rem 0;}
+#main section article p.author {font-size: .9rem; font-style: italic;}
+#main section article p.author {font-size: .9rem; font-style: italic;}
+#main nav article {text-align: left; margin: 1rem; font-size: .8rem}
+#main nav p, #main nav h2 { margin: 0 0 .25rem 0;}
+#main nav article h2 { text-align: left; font-size: .9rem;}
+#main nav article p.author {font-size: .7rem; font-style: italic;}
 
 footer {text-align: center;}
 footer img {padding: 2.7rem .8rem; max-width: 1.9rem;}
