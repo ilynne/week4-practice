@@ -59,7 +59,6 @@ header h1 {color: rgb(132,104,179); font-size: 2.5rem; padding-top: 2.9rem; padd
 #main section article { padding: 2rem; max-width: 50rem;}
 #main section article p { margin: 1rem 0;}
 #main section article p.author {font-size: .9rem; font-style: italic;}
-#main section article p.author {font-size: .9rem; font-style: italic;}
 #main nav article {text-align: left; margin: 1rem; font-size: .8rem}
 #main nav p, #main nav h2 { margin: 0 0 .25rem 0;}
 #main nav article h2 { text-align: left; font-size: .9rem;}
